@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.7.10'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group = 'com.furkan'
+version = '0.0.1'
+sourceCompatibility = 1.8
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+    maven { url 'https://jitpack.io' }
+    maven {
+        name = "spigot"
+        url = uri("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    }
+}
+
+dependencies {
+    compileOnly("org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT")
+    implementation 'com.github.hakan-krgn.hCore:bukkit-primary:0.5.9'
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4")
+}
+
+artifacts.archives(tasks.shadowJar)
+
+tasks.jar {
+    enabled = true
+}
+
+tasks.shadowJar {
+    archiveFileName.set(rootProject.name + "-" + rootProject.version + ".jar")
+}

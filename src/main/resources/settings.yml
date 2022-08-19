@@ -1,0 +1,18 @@
+locations:
+  team-spawn-1: world;0;0;0;0;0
+  team-spawn-2: world;0;0;0;0;0
+  spectate-spawn: world;0;0;0;0;0
+
+tournament:
+  first-tour-starting-cooldown: 15 #seconds
+
+  #What is the count to win?
+  #The team that wins the number of rounds you
+  #set wins the match. For example, you set 4:
+  #The team that wins 4 rounds will be deemed
+  #to have won the match.
+  count-to-win: 4
+  max-round-time: 240
+
+
+

@@ -1,0 +1,73 @@
+help:
+  - '&a&lTournament Help'
+  - ''
+  - '&a&l/uteam create <name>'
+  - '&a&l/uteam join <name>'
+
+# placeholder for "info-messages":
+# {tour-name} = current tour name
+# {encounters} = next matches
+
+tour:
+  tour-names:
+    quarter-final: '&a&lQUARTER FINAL TOUR'
+    semi-final: '&e&lSEMI FINAL TOUR'
+    final: '&c&lFINAL TOUR'
+  info-messages:
+    - ''
+    - '&a&l{tour-name}'
+    - ''
+    - '&8Encounters'
+    - '{encounters}'
+    - ''
+
+# placeholder for "info-messages":
+# {team-1} = first team
+# {team-2} = second team
+match:
+  info-messages:
+    - ''
+    - '&6New match: &e{team-1} &7- &b{team-2}'
+    - ''
+
+# placeholder for "info-messages":
+# {current-round} = current round
+# {team-1} = first team
+# {team-2} = second team
+#--------------------------
+# placeholder for "end-messages":
+# {winner-team} = winner team
+# {team-1} = first team
+# {team-2} = second team
+# {team-1-wins} = first team's wins
+# {team-2-wins} = second team's wins
+# {passing-time} = passing-time
+round:
+  info-messages:
+    - '&6{current-round}. Round: &e{team-1} &7- &b{team-2}'
+  end-messages:
+    - ''
+    - '&6Winner: &e{winner-team}'
+    - '&e{team-1} &6&l{team-1-wins} &7- &3&l{team-2-wins} &b{team-2}'
+    - ''
+    - '&eThis round lasted {passing-time} second!'
+    - ''
+
+# placeholder for "info-messages":
+# {tournament-name} = tournament name
+# {min-team-amount} = minimum team amount
+# {players-per-team} = amount of players per team
+# {best-of-win} = The team that beats it X times in the same match wins.
+tournament:
+  not-enough-teams: '&cThere are not enough teams for the tournament to start.'
+  info-messages:
+    - ''
+    - '&6&l{tournament-name} TOURNAMENTS'
+    - ''
+    - '&fA new tournament is about to start!'
+    - '&f- This tournament consists of {min-team-amount} teams in total.'
+    - '&f- Each team has {players-per-team} players.'
+    - '&f- The team that beats it {best-of-win} times in the same match wins.'
+    - ''
+  teleport-message: '&aTeleporting...'
+  offline-team: '&aThe opposing team was disqualified for inactivity.'
